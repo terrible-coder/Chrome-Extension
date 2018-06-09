@@ -1,13 +1,26 @@
 {
-    "manifest_version": 2,
-    "name": "Coding Train Extension",
-    "version": "0.0.1",
-    "content_scripts": [
-        {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": ["content.js"]
-        }
-    ]
+	"name": "Porn Blocker",
+	"version": "0.0.1",
+	"description": "Pay attention to your wife if you really need some spice in your life.",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": " "
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"include_globs": [
+				"*://*porn*.*",
+				"*://*sex*.*",
+				"*://*sexy*.*",
+				"*://*slut*.*",
+				"*://*fuck*.*",
+				"*://*xvideos*.*"
+			],
+			"js": ["content.js"]
+		}
+	]
 }
